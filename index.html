@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sure4USolutions - Technical Consulting Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader">
+            <div class="gear"></div>
+            <div class="gear gear-2"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <img src="./images/web-logo.png" alt="Sure4USolutions Logo" class="brand-logo">
+                <h1>sure4usolutions</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="terms.html" class="nav-link">T&C</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <i class="fas fa-times nav-close" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fas fa-bars nav-toggle" onclick="openMenu()"></i>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-animation"></div>
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 20%; left: 10%;"></div>
+            <div class="floating-element" style="top: 60%; right: 15%;"></div>
+            <div class="floating-element" style="top: 80%; left: 20%;"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-slide-left">
+                    <div class="hero-logo-section">
+                        <img src="./images/web-logo.png" alt="Sure4USolutions" class="hero-logo">
+                        <h1 class="hero-title">"SURE 4 U SOLUTIONS"</h1>
+                    </div>
+                    <div class="hero-services">
+                        <div class="service-item animate-fade-up" style="animation-delay: 0.2s;">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Technical solutions for Bulk Material Handling Equipment (MHE)</h3>
+                        </div>
+                        <div class="service-item animate-fade-up" style="animation-delay: 0.4s;">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Training Sessions for -</h3>
+                            <ul class="service-list">
+                                <li>Skill Development</li>
+                                <li>Performance Improvement</li>
+                                <li>Time Management</li>
+                                <li>Stress Management</li>
+                                <li>Safety System For Cement Industry</li>
+                            </ul>
+                        </div>
+                        <div class="service-item animate-fade-up" style="animation-delay: 0.6s;">
+                            <div class="service-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <h3>Counselling For -</h3>
+                            <ul class="service-list">
+                                <li>Personal Health Related Issues</li>
+                                <li>Family Issues</li>
+                                <li>Career Issues</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-right">
+                    <div class="consultant-card">
+                        <div class="consultant-image">
+                            <img src="./images/owner.png" alt="Consultant Ravishanker Verma">
+                            <div class="image-overlay">
+                                <div class="experience-badge">
+                                    <span class="counter" data-target="38">0</span>
+                                    <small>Years Experience</small>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Consultant - Ravishanker Verma</h2>
+                        <div class="consultant-stats">
+                            <div class="stat-item">
+                                <span class="counter" data-target="100">0</span>
+                                <small>Projects</small>
+                            </div>
+                            <div class="stat-item">
+                                <span class="counter" data-target="50">0</span>
+                                <small>Clients</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-scale">
+                    <div class="stat-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="counter" data-target="38">0</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-card animate-scale" style="animation-delay: 0.2s;">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>Successful Projects</p>
+                </div>
+                <div class="stat-card animate-scale" style="animation-delay: 0.4s;">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card animate-scale" style="animation-delay: 0.6s;">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title animate-fade-up">Services and Expertise</h2>
+            <div class="services-content">
+                <div class="services-images animate-slide-left">
+                    <div class="image-grid">
+                        <div class="image-item hover-zoom">
+                            <img src="./images/belt.png" alt="Belt Conveyor System">
+                            <div class="image-overlay">
+                                <h4>Belt Conveyor Systems</h4>
+                            </div>
+                        </div>
+                        <div class="image-item hover-zoom">
+                            <img src="./images/crasher.png" alt="Industrial Crusher">
+                            <div class="image-overlay">
+                                <h4>Crushing Equipment</h4>
+                            </div>
+                        </div>
+                        <div class="image-item large hover-zoom">
+                            <img src="./images/crane.png" alt="Industrial Crane">
+                            <div class="image-overlay">
+                                <h4>Material Handling Cranes</h4>
+                            </div>
+                        </div>
+                        <div class="image-item large hover-zoom">
+                            <img src="./images/refiner.png" alt="Cement Plant">
+                            <div class="image-overlay">
+                                <h4>Cement Plant Operations</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-list animate-slide-right">
+                    <ol class="main-list">
+                        <li class="animate-fade-up" style="animation-delay: 0.1s;">
+                            <p>Awareness training session (including On the Job Training) for Installation, Operation and Maintenance of Equipment like-</p>
+                            <ul class="sub-list">
+                                <li>Wagon Tippler and Side Arm Charger</li>
+                                <li>Stacker : Twin Boom, Slewing, Bucket Wheel</li>
+                                <li>Reclaimer : Bridge type, pylon type scraper reclaimer</li>
+                                <li>Belt Conveyor for any application</li>
+                                <li>Bucket Elevator for any application</li>
+                                <li>Screw Conveyor</li>
+                                <li>Crusher for LimeStone Crushing, Coal Crushing and Additive Crushing</li>
+                                <li>Packers and Bag transport and loading system</li>
+                                <li>Truck / Wagon Loading machine</li>
+                                <li>RABH (Reverse Air Bag House for Kiln) and Bag Filter</li>
+                            </ul>
+                        </li>
+                        <li class="animate-fade-up" style="animation-delay: 0.2s;">General Awareness on Steel Structure Fabrication and Erection</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.3s;">Breakdown analysis for all above mentioned equipment</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.4s;">Why Why Analysis and recommendation for Corrective and Preventive action</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.5s;">Upgradation feasibility study and recommendation of suitable actions</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.6s;">Awareness sessions on 5-S concept</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.7s;">Project Execution and it's monitoring - Brownfield and Greenfield Projects</li>
+                        <li class="animate-fade-up" style="animation-delay: 0.8s;">
+                            <p>Awareness sessions on Safety :</p>
+                            <ul class="sub-list">
+                                <li>Unsafe Condition Identification</li>
+                                <li>Unsafe Act Reporting</li>
+                                <li>Near Miss Case Reporting</li>
+                                <li>Job Safety Analysis before starting any work in plant area</li>
+                                <li>Hazard Identification and Risk Assessment</li>
+                                <li>Work Permit System</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <!-- <section class="industries-section">
+        <div class="container">
+            <h2 class="section-title animate-fade-up">Industries We Serve</h2>
+            <div class="industries-grid">
+                <div class="industry-card animate-scale" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=300&h=200&fit=crop" alt="Cement Industry">
+                    <h3>Cement Industry</h3>
+                    <p>Specialized solutions for cement manufacturing processes</p>
+                </div>
+                <div class="industry-card animate-scale" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=200&fit=crop" alt="Power Generation">
+                    <h3>Power Generation</h3>
+                    <p>Thermal power plant material handling systems</p>
+                </div>
+                <div class="industry-card animate-scale" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=300&h=200&fit=crop" alt="Mining Industry">
+                    <h3>Mining Industry</h3>
+                    <p>Mining equipment and material handling solutions</p>
+                </div>
+                <div class="industry-card animate-scale" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop" alt="Steel Industry">
+                    <h3>Steel Industry</h3>
+                    <p>Steel structure fabrication and erection expertise</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-fade-up">
+                <h2>Ready to Optimize Your Operations?</h2>
+                <p>Get expert consulting services tailored to your industrial needs</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary pulse-animation">Get Started</a>
+                    <a href="about.html" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./images/web-logo.png" alt="Sure4USolutions Logo" class="footer-logo">
+                    <h3>sure4usolutions</h3>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:sure4usolutions@gmail.com">sure4usolutions@gmail.com</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>©2023 by sure4usolutions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
