@@ -1,0 +1,15 @@
+{
+  "name": "Sure4USolutions",
+  "short_name": "Sure4U",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "icons": [
+    {
+      "src": "/images/web-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
