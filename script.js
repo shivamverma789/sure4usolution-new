@@ -224,49 +224,78 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 })
 
 // Contact Form Handling
-if (contactForm) {
+document.addEventListener("DOMContentLoaded", () => {
+  const fname = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const message = document.getElementById("message");
+  const contactForm = document.getElementById("contact-form");
+
+  if (!fname || !email || !phone || !message || !contactForm) {
+    console.error("❌ One or more form input elements are missing from the HTML.");
+    return;
+  }
+
   contactForm.addEventListener("submit", (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    // Basic validation
+    // ✅ Basic validation
     if (!fname.value.trim() || !email.value.trim() || !phone.value.trim() || !message.value.trim()) {
-      showNotification("Please fill in all fields", "error")
-      return
+      showNotification("Please fill in all fields", "error");
+      return;
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value)) {
-      showNotification("Please enter a valid email address", "error")
-      return
+      showNotification("Please enter a valid email address", "error");
+      return;
     }
 
-    // Phone validation
-    const phoneRegex = /^[0-9]{10}$/
+    const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phone.value.replace(/\D/g, ""))) {
-      showNotification("Please enter a valid 10-digit phone number", "error")
-      return
+      showNotification("Please enter a valid 10-digit phone number", "error");
+      return;
     }
 
-    // Show loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]')
-    const originalText = submitBtn.textContent
-    submitBtn.textContent = "Sending..."
-    submitBtn.disabled = true
+    // ✅ Show loading state
+    const submitBtn = contactForm.querySelector('button[type="submit"], input[type="submit"]');
+    const originalText = submitBtn.value || submitBtn.textContent;
+    if (submitBtn.tagName === "INPUT") {
+      submitBtn.value = "Sending...";
+    } else {
+      submitBtn.textContent = "Sending...";
+    }
+    submitBtn.disabled = true;
 
-    // Simulate form submission
-    setTimeout(() => {
-      showNotification("Thank you for your message! We will get back to you soon.", "success")
+    // ✅ Send with EmailJS
+    emailjs.send("service_cs9fckh", "template_9p6aepe", {
+      name: fname.value,
+      email: email.value,
+      phone: phone.value,
+      message: message.value,
+      time: new Date().toLocaleString()
+    }).then(() => {
+      showNotification("Email sent successfully!", "success");
+      contactForm.reset();
+      if (submitBtn.tagName === "INPUT") {
+        submitBtn.value = originalText;
+      } else {
+        submitBtn.textContent = originalText;
+      }
+      submitBtn.disabled = false;
+    }, (error) => {
+      console.error("EmailJS Error:", error);
+      showNotification("Failed to send email. Please try again later.", "error");
+      if (submitBtn.tagName === "INPUT") {
+        submitBtn.value = originalText;
+      } else {
+        submitBtn.textContent = originalText;
+      }
+      submitBtn.disabled = false;
+    });
+  });
+});
 
-      // Reset form
-      contactForm.reset()
-
-      // Reset button
-      submitBtn.textContent = originalText
-      submitBtn.disabled = false
-    }, 2000)
-  })
-}
 
 // Notification System
 function showNotification(message, type = "info") {
